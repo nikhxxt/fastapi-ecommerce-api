@@ -1,4 +1,4 @@
-**# ⚡️ FASTAPI-ECCOMMERCE-API  
+# ⚡️ FASTAPI-ECCOMMERCE-API  
 🛒 Secure Product Creation API  
 Task‑Build a secure, cloud-deployed FastAPI backend for product creation with filtered customer-facing responses.
 
