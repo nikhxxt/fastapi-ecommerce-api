@@ -1,19 +1,68 @@
+**# ⚡️ FASTAPI-ECCOMMERCE-API  
+🛒 Secure Product Creation API  
+Task‑Build a secure, cloud-deployed FastAPI backend for product creation with filtered customer-facing responses.
 
-# 🛒 FastAPI E-commerce Product API
+Goal: Implement a modular, token-ready API that accepts full product metadata but only exposes public fields to customers. Deployed on Render with Swagger UI for testing.
 
-A secure, cloud-deployed FastAPI backend for product creation—designed to mimic platforms like Amazon. This API filters sensitive retailer metadata from customer-facing responses and is deployed on Render.
+---
 
-## 🚀 Live Demo
+🔖 Badges  
+License: MIT  
+Repo size  
+GitHub stars  
+GitHub forks  
 
-Access the interactive Swagger UI:
+---
+
+📚 Table of Contents  
+- What’s Included  
+- Quick Start — Reproduce the API  
+- Folder Structure  
+- Sample I/O  
+- Swagger & Curl Testing  
+- Checklist Before Submission  
+- License & Contact  
+
+---
+
+📦 What’s Included  
+- `main.py` — FastAPI entry point  
+- `models.py` — Pydantic models for input/output filtering  
+- `routers/products.py` — Modular route definitions  
+- `render.yaml` — Render deployment config  
+- `requirements.txt` — Python dependencies  
+- `README.md` — This file  
+- `LICENSE` — MIT License  
+
+---
+
+## 🚀 Quick Start — Reproduce the API
+
+```bash
+git clone https://github.com/nikhxxt/fastapi-ecommerce-api.git
+cd fastapi-ecommerce-api
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+Visit Swagger UI at:  
 👉 [https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
 
-## 📦 Features
+---
 
-- **POST /products/**: Create a product with full metadata
-- **GET /products/**: Retrieve public product data (id, name, price)
-- **GET /admin/products/**: Retrieve full internal product data (admin view)
-- **Secure Response Filtering**: Sensitive fields like `discounted_price` and `internal_retailer_details` are hidden from public responses
+## 📁 Folder Structure
+
+```
+app/
+├── routers/
+│   └── products.py
+├── models.py
+├── main.py
+render.yaml
+requirements.txt
+```
+
+---
 
 ## 🧪 Sample I/O
 
@@ -21,8 +70,6 @@ Access the interactive Swagger UI:
 
 ```json
 POST /products/
-Content-Type: application/json
-
 {
   "id": 1,
   "name": "iPhone 15",
@@ -42,41 +89,32 @@ Content-Type: application/json
 }
 ```
 
-## 🧰 Tech Stack
+---
 
-- **FastAPI** for backend
-- **Pydantic** for data validation
-- **Render** for cloud deployment
-- **Swagger UI** for interactive API docs
+## 🧰 Swagger & Curl Testing
 
-## 📁 Project Structure
+### Swagger UI  
+Visit: [https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
 
+### Curl Command
+
+```bash
+curl -X POST https://fastapi-ecommerce-api-tagg.onrender.com/products/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": 1,
+    "name": "iPhone 15",
+    "price": 999.99,
+    "discounted_price": 899.99,
+    "internal_retailer_details": "Apple_US_2025_Internal"
+}'
 ```
-app/
-├── routers/
-│   └── products.py
-├── models.py
-├── main.py
-render.yaml
-requirements.txt
-```
-
-## ⚙️ Deployment (Render)
-
-```yaml
-# render.yaml
-services:
-  - type: web
-    name: fastapi-ecommerce
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
-```
-
-## 📜 License
-
-This project is open-source. You may reuse and adapt it with proper attribution.
 
 ---
+
+## 📜 License & Contact  
+This project is licensed under the MIT License — see `LICENSE`.  
+Repo: [https://github.com/nikhxxt/fastapi-ecommerce-api](https://github.com/nikhxxt/fastapi-ecommerce-api)
+
+```
 
