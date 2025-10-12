@@ -1,6 +1,6 @@
 
 # ⚡️ FASTAPI-ECOMMERCE-API  
-🛒 **Secure Product Creation API**
+🛒 Secure Product Creation API
 
 Build a secure, cloud-deployed FastAPI backend for product creation with filtered customer-facing responses.
 
@@ -21,31 +21,18 @@ Implement a modular, token-ready API that:
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-brightgreen.svg)
-![Render Deployment](https://img.shields.io/badge/Deployed%20on-Render-blue.svg)
+![Render](https://img.shields.io/badge/Deployed%20on-Render-blue.svg)
 
 ---
 
 ## 📚 Table of Contents
 
-- [What’s Included](#-whats-included)
 - [Quick Start](#-quick-start)
-- [Folder Structure](#-folder-structure)
+- [Folder Structure & What’s Included](#-folder-structure--whats-included)
 - [Sample I/O](#-sample-io)
-- [Testing](#-testing)
+- [Swagger & Curl Testing](#-swagger--curl-testing)
 - [Checklist Before Submission](#-checklist-before-submission)
 - [License & Contact](#-license--contact)
-
----
-
-## 📦 What’s Included
-
-- `main.py` — FastAPI entry point  
-- `models.py` — Pydantic models for input/output filtering  
-- `routers/products.py` — Modular route definitions  
-- `render.yaml` — Render deployment config  
-- `requirements.txt` — Python dependencies  
-- `README.md` — This file  
-- `LICENSE` — MIT License
 
 ---
 
@@ -63,10 +50,19 @@ Visit Swagger UI:
 
 ---
 
-## 📁 Folder Structure
+## 📁 Folder Structure & What’s Included
 
 ```
-fastapi-ecommerce-api/ ├── app/ │ ├── routers/ │ │ └── products.py # Modular route definitions │ ├── models.py # Pydantic models for input/output filtering │ └── main.py # FastAPI entry point ├── render.yaml # Render deployment config ├── requirements.txt # Python dependencies ├── README.md # Project documentation ├── LICENSE # MIT License
+fastapi-ecommerce-api/
+├── app/
+│   ├── routers/
+│   │   └── products.py        # Modular route definitions
+│   ├── models.py              # Pydantic models for input/output filtering
+│   └── main.py                # FastAPI entry point
+├── render.yaml                # Render deployment config
+├── requirements.txt           # Python dependencies
+├── README.md                  # Project documentation
+├── LICENSE                    # MIT License
 ```
 
 ---
@@ -98,10 +94,9 @@ POST /products/
 
 ---
 
-## 🧰 Testing
+## 🧰 Swagger & Curl Testing
 
 ### 🔸 Swagger UI  
-Use the interactive API explorer:  
 [https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
 
 ### 🔸 Curl Command
@@ -118,14 +113,11 @@ curl -X POST https://fastapi-ecommerce-api-tagg.onrender.com/products/ \
 }'
 ```
 
+
 ---
 
 ## 📜 License & Contact
 
-This project is licensed under the MIT License — see `LICENSE`.  
+This project is licensed under the MIT License — see [`LICENSE`](LICENSE).  
 📂 Repo: [https://github.com/nikhxxt/fastapi-ecommerce-api](https://github.com/nikhxxt/fastapi-ecommerce-api)
 ```
-
----
-
-You can copy this directly into your `README.md`. Want me to help you add a badge section with shields.io, or a `CREDITS.md` for open-source polish? Let’s make this repo shine.
