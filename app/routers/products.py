@@ -1,13 +1,13 @@
+# routes/products.py
 from fastapi import APIRouter
-from app.models import ProductCreate, ProductPublic
+from app.schemas import ProductCreate, ProductResponse
 
 router = APIRouter()
-product_db = {}
 
-@router.post("/products/", response_model=ProductPublic)
+@router.post("/products/", response_model=ProductResponse)
 def create_product(product: ProductCreate):
-    product_db[product.id] = product
-    return ProductPublic(
+    # Normally you'd save to DB here
+    return ProductResponse(
         id=product.id,
         name=product.name,
         price=product.price
