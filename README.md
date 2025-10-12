@@ -31,7 +31,6 @@ Implement a modular, token-ready API that:
 - [Folder Structure & What’s Included](#-folder-structure--whats-included)
 - [Sample I/O](#-sample-io)
 - [Swagger & Curl Testing](#-swagger--curl-testing)
-- [Checklist Before Submission](#-checklist-before-submission)
 - [License & Contact](#-license--contact)
 
 ---
