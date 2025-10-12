@@ -44,10 +44,6 @@ cd fastapi-ecommerce-api
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
-
-Visit Swagger UI:  
-👉 [https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
-
 ---
 
 ## 📁 Folder Structure
@@ -97,7 +93,8 @@ POST /products/
 ## 🧰 Swagger & Curl Testing
 
 ### 🔸 Swagger UI  
-[https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
+Access the interactive API explorer:  
+👉 [https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
 
 ### 🔸 Curl Command
 
