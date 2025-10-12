@@ -1,4 +1,3 @@
-
 # ⚡️ FASTAPI-ECOMMERCE-API  
 🛒 Secure Product Creation API
 
@@ -6,9 +5,34 @@ Build a secure, cloud-deployed FastAPI backend for product creation with filtere
 
 ---
 
-## 🧩 Project Overview
+
+## 📚 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Badges](#-badges)
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Folder Structure](#-folder-structure)
+- [Sample I/O](#-sample-io)
+- [Swagger & Curl Testing](#-swagger--curl-testing)
+- [Deployment](#-deployment)
+- [License & Contact](#-license--contact)
+  
+---
+
+
+ ## 🧩 Project Overview
 
 This project implements a secure, modular FastAPI backend for an e-commerce platform. It allows retailers to create product listings with internal metadata while ensuring that only public-facing information is exposed to customers. The API is designed with best practices in mind: modular routing, Pydantic-based data validation, and response filtering using FastAPI’s `response_model`. It is fully containerized and deployed on [Render](https://fastapi-ecommerce-api-tagg.onrender.com).
+
+---
+
+## 🔖 Badges
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-brightgreen.svg)
+![Render](https://img.shields.io/badge/Deployed%20on-Render-blue.svg)
 
 ---
 
@@ -23,17 +47,11 @@ This project implements a secure, modular FastAPI backend for an e-commerce plat
 
 ---
 
-## 🔖 Badges
-
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-brightgreen.svg)
-![Render](https://img.shields.io/badge/Deployed%20on-Render-blue.svg)
-
----
-
 ## 📚 Table of Contents
 
+- [Project Overview](#-project-overview)
+- [Badges](#-badges)
+- [Features](#-features)
 - [Quick Start](#-quick-start)
 - [Folder Structure](#-folder-structure)
 - [Sample I/O](#-sample-io)
