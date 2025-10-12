@@ -47,19 +47,6 @@ This project implements a secure, modular FastAPI backend for an e-commerce plat
 
 ---
 
-## 📚 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Badges](#-badges)
-- [Features](#-features)
-- [Quick Start](#-quick-start)
-- [Folder Structure](#-folder-structure)
-- [Sample I/O](#-sample-io)
-- [Swagger & Curl Testing](#-swagger--curl-testing)
-- [Deployment](#-deployment)
-- [License & Contact](#-license--contact)
-
----
 
 ## 🚀 Quick Start
 
