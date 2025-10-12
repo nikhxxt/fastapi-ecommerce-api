@@ -6,13 +6,20 @@ Build a secure, cloud-deployed FastAPI backend for product creation with filtere
 
 ---
 
-## 🎯 Goal
+## 🧩 Project Overview
 
-Implement a modular, token-ready API that:
-- Accepts full product metadata
-- Returns only public fields to customers
-- Is deployed on Render
-- Includes Swagger UI for testing
+This project implements a secure, modular FastAPI backend for an e-commerce platform. It allows retailers to create product listings with internal metadata while ensuring that only public-facing information is exposed to customers. The API is designed with best practices in mind: modular routing, Pydantic-based data validation, and response filtering using FastAPI’s `response_model`. It is fully containerized and deployed on [Render](https://fastapi-ecommerce-api-tagg.onrender.com).
+
+---
+
+## 🎯 Features
+
+- ✅ Accepts full product metadata including sensitive internal fields
+- ✅ Returns only public fields (`id`, `name`, `price`) to customers
+- ✅ Modular FastAPI structure with routers and schemas
+- ✅ Swagger UI for interactive API testing
+- ✅ Deployed on Render for public access
+- ✅ MIT Licensed and ready for portfolio/demo use
 
 ---
 
@@ -27,23 +34,31 @@ Implement a modular, token-ready API that:
 
 ## 📚 Table of Contents
 
-- [Quick Start](#quick-start)
-- [Folder Structure & What’s Included](#folder-structure--whats-included)
-- [Sample I/O](#sample-io)
-- [Swagger & Curl Testing](#swagger--curl-testing)
-- [License & Contact](#license--contact)
-
+- [Quick Start](#-quick-start)
+- [Folder Structure](#-folder-structure)
+- [Sample I/O](#-sample-io)
+- [Swagger & Curl Testing](#-swagger--curl-testing)
+- [Deployment](#-deployment)
+- [License & Contact](#-license--contact)
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
+# Clone the repository
 git clone https://github.com/nikhxxt/fastapi-ecommerce-api.git
 cd fastapi-ecommerce-api
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the app locally
 uvicorn app.main:app --reload
 ```
+
+Access the API at: [http://localhost:8000/docs](http://localhost:8000/docs)
+
 ---
 
 ## 📁 Folder Structure
@@ -53,7 +68,8 @@ fastapi-ecommerce-api/
 ├── app/
 │   ├── routers/
 │   │   └── products.py        # Modular route definitions
-│   ├── models.py              # Pydantic models for input/output filtering
+│   ├── models.py              # Internal Pydantic models
+│   ├── schemas.py             # Input/output schemas for request/response
 │   └── main.py                # FastAPI entry point
 ├── render.yaml                # Render deployment config
 ├── requirements.txt           # Python dependencies
@@ -87,7 +103,8 @@ POST /products/
   "price": 999.99
 }
 ```
-> 🔐 Note: Although the request includes `discounted_price` and `internal_retailer_details`, these fields are excluded from the public response using FastAPI’s `response_model` filtering via `ProductPublic`.
+
+> 🔐 Note: `discounted_price` and `internal_retailer_details` are accepted in the request but excluded from the response using `response_model=ProductPublic`.
 
 ---
 
@@ -111,6 +128,21 @@ curl -X POST https://fastapi-ecommerce-api-tagg.onrender.com/products/ \
 }'
 ```
 
+---
+
+## ☁️ Deployment
+
+This project is deployed on [Render](https://render.com) using the `render.yaml` configuration file.
+
+To deploy your own version:
+
+1. Push your code to a public GitHub repository
+2. Create a new Web Service on Render
+3. Connect your GitHub repo and select `render.yaml` as the deploy configuration
+4. Done! Your API will be live and accessible via HTTPS
+
+Live Demo:  
+🌐 [https://fastapi-ecommerce-api-tagg.onrender.com](https://fastapi-ecommerce-api-tagg.onrender.com)
 
 ---
 
@@ -118,4 +150,7 @@ curl -X POST https://fastapi-ecommerce-api-tagg.onrender.com/products/ \
 
 This project is licensed under the MIT License — see [`LICENSE`](LICENSE).  
 📂 Repo: [https://github.com/nikhxxt/fastapi-ecommerce-api](https://github.com/nikhxxt/fastapi-ecommerce-api)
-```
+
+For questions or feedback, feel free to open an issue or fork the repo.
+
+---
