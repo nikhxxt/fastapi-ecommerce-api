@@ -50,7 +50,7 @@ Visit Swagger UI:
 
 ---
 
-## 📁 Folder Structure & What’s Included
+## 📁 Folder Structure
 
 ```
 fastapi-ecommerce-api/
