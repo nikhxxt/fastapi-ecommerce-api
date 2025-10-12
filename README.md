@@ -62,8 +62,6 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Access the API at: [http://localhost:8000/docs](http://localhost:8000/docs)
-
 ---
 
 ## 📁 Folder Structure
