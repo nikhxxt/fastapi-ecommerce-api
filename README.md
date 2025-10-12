@@ -27,11 +27,12 @@ Implement a modular, token-ready API that:
 
 ## 📚 Table of Contents
 
-- [Quick Start](#-quick-start)
-- [Folder Structure & What’s Included](#-folder-structure--whats-included)
-- [Sample I/O](#-sample-io)
-- [Swagger & Curl Testing](#-swagger--curl-testing)
-- [License & Contact](#-license--contact)
+- [Quick Start](#quick-start)
+- [Folder Structure & What’s Included](#folder-structure--whats-included)
+- [Sample I/O](#sample-io)
+- [Swagger & Curl Testing](#swagger--curl-testing)
+- [License & Contact](#license--contact)
+
 
 ---
 
@@ -86,6 +87,7 @@ POST /products/
   "price": 999.99
 }
 ```
+> 🔐 Note: Although the request includes `discounted_price` and `internal_retailer_details`, these fields are excluded from the public response using FastAPI’s `response_model` filtering via `ProductPublic`.
 
 ---
 
