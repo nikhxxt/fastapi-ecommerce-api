@@ -8,6 +8,7 @@ Build a secure, cloud-deployed FastAPI backend for product creation with filtere
 
 ## 📚 Table of Contents
 
+- [Tech Stack](#-tech-stack)
 - [Project Overview](#-project-overview)
 - [Badges](#-badges)
 - [Features](#-features)
@@ -20,6 +21,22 @@ Build a secure, cloud-deployed FastAPI backend for product creation with filtere
   
 ---
 
+
+## 🛠️ Tech Stack
+
+This project is built using modern, production-grade technologies:
+
+- **FastAPI** – High-performance Python web framework for building APIs
+- **Pydantic** – Data validation and serialization using Python type hints
+- **Uvicorn** – Lightning-fast ASGI server for running FastAPI apps
+- **Render** – Cloud platform for deploying web services with CI/CD
+- **Python 3.10** – Language runtime with type hinting and async support
+- **Swagger UI** – Auto-generated API documentation and testing interface
+- **JSON** – Standard format for request/response payloads
+
+
+
+---
 
  ## 🧩 Project Overview
 
