@@ -161,9 +161,6 @@ To deploy your own version:
 3. Connect your GitHub repo and select `render.yaml` as the deploy configuration
 4. Done! Your API will be live and accessible via HTTPS
 
-Live Demo:  
-🌐 [https://fastapi-ecommerce-api-tagg.onrender.com](https://fastapi-ecommerce-api-tagg.onrender.com)
-
 ---
 
 ## 📜 License & Contact
