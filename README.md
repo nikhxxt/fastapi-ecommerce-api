@@ -140,13 +140,6 @@ The deployed API can be accessed through:
 
 [https://fastapi-ecommerce-api-tagg.onrender.com/](https://fastapi-ecommerce-api-tagg.onrender.com/)
 
-## ⚠️ Limitations
-
-* This project focuses on product creation, validation, and response filtering.
-* It is not a complete e-commerce platform.
-* No frontend application is included.
-* Authentication and authorization are not implemented.
-* The project is intended as an API demonstration and portfolio project.
 
 ## 📜 License
 
