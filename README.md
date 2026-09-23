@@ -1,82 +1,42 @@
 # ⚡ FastAPI E-Commerce API
 
-A modular FastAPI backend demonstrating product creation, data validation, and response filtering. The API accepts product metadata while ensuring that only customer-facing fields are included in responses.
+A modular **FastAPI REST API** demonstrating request validation, schema separation, and controlled API responses.
 
 ## 🚀 Features
 
-- Product creation using FastAPI
-- Pydantic-based request validation
-- Response filtering using FastAPI `response_model`
-- Separates internal product metadata from public-facing data
-- Modular router and schema structure
-- Interactive Swagger API documentation
-- Deployed on Render
-- MIT licensed
+* Product creation with FastAPI
+* Request validation using **Pydantic**
+* Separate internal and public schemas
+* Response filtering with FastAPI `response_model`
+* Modular router-based architecture
+* Interactive Swagger/OpenAPI documentation
+* Deployed on Render
 
 ## 🛠️ Tech Stack
 
-- Python 3.10+
-- FastAPI
-- Pydantic
-- Uvicorn
-- Render
-- Swagger UI
-- JSON
+**Python 3.10+ · FastAPI · Pydantic · Uvicorn · REST API · Swagger/OpenAPI · Render**
 
-## 🧩 Project Overview
-
-This project demonstrates how a FastAPI backend can handle product data while controlling which fields are exposed to API consumers.
-
-A product request can contain both public and internal fields. The API uses Pydantic schemas and FastAPI's `response_model` to return only the fields intended for customers.
-
-For example, internal fields such as `discounted_price` and `internal_retailer_details` can be accepted in the request but excluded from the public response.
-
-## 🚀 Quick Start
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/nikhxxt/fastapi-ecommerce-api.git
-cd fastapi-ecommerce-api
-````
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the application
-
-```bash
-uvicorn app.main:app --reload
-```
-
-The API will be available locally through the FastAPI server.
-
-## 📁 Folder Structure
+## 🧩 Architecture
 
 ```text
 fastapi-ecommerce-api/
 ├── app/
 │   ├── routers/
-│   │   └── products.py        # Product API routes
-│   ├── models.py              # Internal product models
-│   ├── schemas.py             # Request and response schemas
-│   └── main.py                # FastAPI application entry point
-├── render.yaml                # Render deployment configuration
-├── requirements.txt           # Python dependencies
-├── README.md                  # Project documentation
-└── LICENSE                    # MIT License
+│   │   └── products.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── main.py
+├── render.yaml
+├── requirements.txt
+├── README.md
+└── LICENSE
 ```
 
-## 🧪 Sample API Request
+The API separates internal product data from customer-facing responses. Fields such as `discounted_price` and `internal_retailer_details` can be accepted in the request but are excluded from the public response using `response_model`.
 
-### `POST /products/`
+### Example
 
-Create a product using the API.
-
-**Request:**
+**Request**
 
 ```json
 {
@@ -88,11 +48,7 @@ Create a product using the API.
 }
 ```
 
-## 📤 Public Response
-
-The API uses a public response schema to expose only customer-facing fields.
-
-**Response:**
+**Public Response**
 
 ```json
 {
@@ -102,46 +58,41 @@ The API uses a public response schema to expose only customer-facing fields.
 }
 ```
 
-> 🔐 `discounted_price` and `internal_retailer_details` are accepted in the request but excluded from the response using FastAPI's `response_model`.
+This demonstrates how the backend can accept internal metadata while exposing only customer-facing fields through the API response schema.
 
-## 🌐 Swagger API Documentation
+## 🌐 Live API
 
-Test the API interactively using Swagger UI:
+**API:**
+https://fastapi-ecommerce-api-tagg.onrender.com/
 
-**Live API:**
-[https://fastapi-ecommerce-api-tagg.onrender.com/](https://fastapi-ecommerce-api-tagg.onrender.com/)
+**Swagger:**
+https://fastapi-ecommerce-api-tagg.onrender.com/docs
 
-**Swagger Docs:**
-[https://fastapi-ecommerce-api-tagg.onrender.com/docs](https://fastapi-ecommerce-api-tagg.onrender.com/docs)
+The API can be tested directly through Swagger UI.
 
-Swagger provides an interactive interface for sending requests and viewing API responses.
-
-## 🧪 Curl Testing
-
-Example request:
+## 🚀 Run Locally
 
 ```bash
-curl -X POST https://fastapi-ecommerce-api-tagg.onrender.com/products/ \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": 1,
-    "name": "iPhone 15",
-    "price": 999.99,
-    "discounted_price": 899.99,
-    "internal_retailer_details": "Apple_US_2025_Internal"
-  }'
+git clone https://github.com/nikhxxt/fastapi-ecommerce-api.git
+cd fastapi-ecommerce-api
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 ```
 
-## ☁️ Deployment
+The API will be available at:
 
-The API is deployed on Render using the `render.yaml` configuration file.
+```text
+http://127.0.0.1:8000
+```
 
-The deployed API can be accessed through:
+Swagger documentation:
 
-[https://fastapi-ecommerce-api-tagg.onrender.com/](https://fastapi-ecommerce-api-tagg.onrender.com/)
+```text
+http://127.0.0.1:8000/docs
+```
 
+## 📄 License
 
-## 📜 License
+MIT License
 
-This project is licensed under the MIT License. See the [`LICENSE`](https://github.com/nikhxxt/fastapi-ecommerce-api/blob/main/LICENSE) file for details.
 
